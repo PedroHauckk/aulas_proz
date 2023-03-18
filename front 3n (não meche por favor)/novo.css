@@ -1,0 +1,49 @@
+html{
+    background-color: rgb(47, 47, 47);
+
+}
+body{
+    width: 600px;
+    margin: 0 auto;
+    background-color: rgb(78, 78, 78);
+    padding: 0 20px 20px 20px;
+    border: 3px solid black;
+    color: white;
+    border-radius: 20px;
+}
+img{
+    height: 250px;
+    display: block;
+}
+.logo{
+    text-align: center;
+    margin: 0 auto;
+    
+    border-radius: 10px;
+
+}
+h1{
+    margin: 0;
+    padding: 20px 0;
+    color: orange;
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+p{
+    margin: 25px 25px;
+    padding: 25px;
+    text-align: justify;
+    font-size: 18px;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.buscanav{
+    padding-bottom: 200px;
+    background-color: rgb(255, 188, 62);
+    width: 100% auto;
+}
+.busca{
+    height: 20px;
+}
