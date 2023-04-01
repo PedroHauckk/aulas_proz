@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="script" href="Trabalho.js">
+</head>
+<body>
+    <p id="demo"></p>
+    <h2>Cadastro de Professores</h2>
+    <form name="CadProf" action="" onsubmit="return CriticaCampos()">
+        <label for="matprof">Matrícula do Professor</label><br>
+        <input type="text" name="matprof"><br><br>
+        <label for="nomprof">Nome do Professor</label><br>
+        <input type="text" name="nomprof"><br><br>
+        <label for="curprof">Curso do Professor</label><br>
+        <input type="text" name="curprof"><br><br>
+        <label for="disprof">Disciplina do Professor</label><br>
+        <input type="text" name="disprof"><br><br>
+        <input type="submit" value="Enviar" >
+    </form>
+    <button type="button" onmouseover="Trocapala(this)" onmouseout="Volta(this)" onclick="Resetar()" >??????</button>
+    <p>Quando clicado o Botão ENVIAR , uma crítica de todos os campos deve acontecer.</p>
+    <p>Mostrar uma msg caso haja algum erro OU mostrar uma msg de que o cadastro será enviado para o Servidor de BD.</p>
+    <script>
+        function CriticaCampos(){
+            if(document.forms["CadProf"]["matprof"].value=="") {
+                window.alert ("Matrícula do Professor não pode ficar vazio!") 
+                return false 
+            }
+            else if (document.forms["CadProf"] ["nomprof"].value=="") {
+                window.alert ("Nome do Professor não pode ficar vazio!") 
+                return false
+            }
+            else if (document.forms["CadProf"] ["curprof"].value=="") {
+                window.alert ("Curso do Professor não pode ficar vazio!") 
+                return false
+            }
+            else if (document.forms["CadProf"] ["disprof"].value=="") {
+                window.alert ("Disciplina do Professor não pode ficar vazio!") 
+                return false
+            }
+            else
+                window.alert ("Todos os campos estão preenchidos. Serão enviados para o SGBD!")
+                return true
+            } 
+        function Trocapala(obj){
+            obj.innerHTML = "Apaga"
+        }
+        function Resetar(){
+            document.forms["CadProf"]["matprof"].value =""
+            document.forms["CadProf"]["nomprof"].value =""
+            document.forms["CadProf"]["curprof"].value =""
+            document.forms["CadProf"]["disprof"].value =""
+        }
+        function Volta(obj){
+            obj.innerHTML = "??????"
+        }
+    </script>
+</body>
+</html>
